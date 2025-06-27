@@ -4,8 +4,8 @@ const cors = require('cors');
 
 const app = express();
 
-const PORT = 8000;
-const DB_URL = 'mongodb+srv://logtzu99:mySecret123@todoappcluster.zcdcgis.mongodb.net/?retryWrites=true&w=majority&appName=ToDoAppCluster';
+const PORT = process.env.PORT || 8000;
+const DB_URL = process.env.MONGO_URL;
 
 app.use(cors());
 app.use(express.json());
